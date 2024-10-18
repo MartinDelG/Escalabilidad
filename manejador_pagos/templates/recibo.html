@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recibo de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .header {
+            text-align: center;
+        }
+        .details {
+            margin-top: 30px;
+        }
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .details th, .details td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Recibo de Pago</h1>
+    </div>
+    <div class="details">
+        <p><strong>Nombre del Estudiante:</strong> {{ estudiante.nombre }}</p>
+        <p><strong>ID Estudiante:</strong> {{ estudiante.id }}</p>
+        <table>
+            <tr>
+                <th>Cobro Total</th>
+                <th>Cantidad Pagada</th>
+                <th>Deuda</th>
+            </tr>
+            <tr>
+                <td>{{ info_pago.cobro_total }}</td>
+                <td>{{ info_pago.cantidad_pagada }}</td>
+                <td>{{ deuda }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <p>Lo logramos brou</p>
+    </div>
+</body>
+</html>
